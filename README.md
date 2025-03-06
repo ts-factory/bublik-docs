@@ -9,7 +9,6 @@ Example config:
 
 ```json
 {
-  "url": "http://example.com"
   "base": "/prefix/docs/",
   "output": "output-folder-name"
 }
