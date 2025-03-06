@@ -18,7 +18,7 @@ cd "$BUBLIK_UI_DOCS_LOCATION" || exit
 
 while IFS= read -r ITEM; do
   BASE_URL=$(echo "$ITEM" | jq -r '.base')
-  URL=$(echo "$ITEM" | jq -r '.url')
+  URL=$(echo "$ITEM" | jq -r '.url // "http://localhost"') # Default to localhost if URL is empty or null
   OUTPUT_FOLDER=$(echo "$ITEM" | jq -r '.output')
 
   echo "#############################################"
