@@ -23,6 +23,7 @@ jobs:
           repository: ts-factory/bublik-release
           path: ${{env.BUBLIK_UI_DOCS_LOCATION}}
           ref: main
+          fetch-depth: 0
 
       - name: Get UI tag
         id: get-tag
